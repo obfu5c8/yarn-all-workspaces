@@ -6,7 +6,7 @@
     "workspace",
     "cli"
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/obfu5c8/yarn-all-workspaces",
   "bugs": {
     "url": "https://github.com/obfu5c8/yarn-all-workspaces/issues"
