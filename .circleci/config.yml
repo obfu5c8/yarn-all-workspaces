@@ -27,13 +27,8 @@ jobs:
           - v1-dependencies-
 
       - run: 
-          name: Install greenkeeper utils
-          command: npm install --no-save greenkeeper-lockfile
-
-      - run: 
           name: Greenkeeper Update
           command: yarn greenkeeper-lockfile-update
-
 
       - run: 
           name: Install dependencies
