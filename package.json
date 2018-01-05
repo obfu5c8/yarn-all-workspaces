@@ -1,0 +1,43 @@
+{
+  "name": "yarn-all-workspaces",
+  "description": "Workspace CLI utilities for yarn",
+  "keywords": [
+    "yarn",
+    "workspace",
+    "cli"
+  ],
+  "version": "1.0.0",
+  "homepage": "https://github.com/obfu5c8/yarn-workspaces",
+  "bugs": {
+    "url": "https://github.com/obfu5c8/yarn-workspaces/issues"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "all-workspaces": "bin/yarn-all-workspaces.js"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "obfu5c8",
+    "email": "alan@obfu5c8.me"
+  },
+  "files": [
+    "./lib",
+    "./bin"
+  ],
+  "scripts": {
+    "clean": "rimraf ./lib",
+    "prebuild": "rimraf ./lib",
+    "build": "babel -D src -d lib"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "split2": "^2.2.0",
+    "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.36",
+    "@babel/core": "^7.0.0-beta.36",
+    "@babel/preset-env": "^7.0.0-beta.36",
+    "rimraf": "^2.6.2"
+  }
+}
