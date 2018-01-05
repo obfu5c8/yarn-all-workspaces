@@ -1,9 +1,11 @@
 yarn-all-workspaces
 ===================
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/obfu5c8/yarn-all-workspaces.svg)](https://greenkeeper.io/)
-
 CLI utility to help execute yarn commands in every workspace in a project
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/obfu5c8/yarn-all-workspaces.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/obfu5c8/yarn-all-workspaces/tree/develop.svg?style=svg&circle-token=a230b12030d44521ecedcff0881e5baf39c574cf)](https://circleci.com/gh/obfu5c8/yarn-all-workspaces/tree/develop)
+
 
 -------------------------------------------
 
