@@ -26,12 +26,18 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: npm install --no-save greenkeeper-lockfile@1
-      
-      - run: yarn greenkeeper-lockfile-update
+      - run: 
+          name: Install greenkeeper utils
+          command: npm install --no-save greenkeeper-lockfile
+
+      - run: 
+          name: Greenkeeper Update
+          command: yarn greenkeeper-lockfile-update
 
 
-      - run: yarn install
+      - run: 
+          name: Install dependencies
+          command: yarn install
 
       - save_cache:
           paths:
@@ -40,10 +46,12 @@ jobs:
               
       # run tests!
       - run:
-          name: Unit tests
+          name: Run Unit tests
           command: yarn test --ci --testResultsProcessor="jest-junit"
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
 
-      - run: yarn greenkeeper-lockfile-upload
+      - run: 
+          name: Greenkeeper Upload
+          command: yarn greenkeeper-lockfile-upload
 
