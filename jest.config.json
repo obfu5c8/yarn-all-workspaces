@@ -1,5 +1,6 @@
 {
     "collectCoverage": true,
+    "coverageDirectory": "reports/coverage",
 
     "testMatch": ["**/test/**/*.js"]
 }   

@@ -26,6 +26,10 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      - run: yarn global add greenkeeper-lockfile@1
+      - run: greenkeeper-lockfile-update
+
+
       - run: yarn install
 
       - save_cache:
@@ -34,6 +38,11 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
               
       # run tests!
-      - run: yarn test
+      - run:
+        name: Unit tests
+        command: yarn test --ci --testResultsProcessor="jest-junit"
+        environment:
+          JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
 
+      - run: greenkeeper-lockfile-upload
 
