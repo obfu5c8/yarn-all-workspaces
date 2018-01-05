@@ -26,8 +26,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn global add greenkeeper-lockfile@1
-      - run: greenkeeper-lockfile-update
+      - run: npm install --no-save greenkeeper-lockfile@1
+      
+      - run: yarn greenkeeper-lockfile-update
 
 
       - run: yarn install
@@ -44,5 +45,5 @@ jobs:
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
 
-      - run: greenkeeper-lockfile-upload
+      - run: yarn greenkeeper-lockfile-upload
 
