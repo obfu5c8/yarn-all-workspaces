@@ -1,6 +1,8 @@
 yarn-all-workspaces
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/obfu5c8/yarn-all-workspaces.svg)](https://greenkeeper.io/)
+
 CLI utility to help execute yarn commands in every workspace in a project
 
 -------------------------------------------
