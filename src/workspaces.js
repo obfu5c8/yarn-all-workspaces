@@ -6,7 +6,6 @@ const getPackageJson = require('./package');
 
 function getWorkspaces ( rootDir = process.cwd() ) {
 
-    const packageJson = path.join(rootDir,'package.json')
     const pkg = getPackageJson(rootDir);
 
     if(!pkg.workspaces || !pkg.workspaces.length) {
@@ -21,8 +20,8 @@ function getWorkspaces ( rootDir = process.cwd() ) {
         }))
         .reduce( (dict, arr) => {
             arr.forEach( dir => {
-                const pkg = getPackageJson(path.join(rootDir,dir))
-                dict[pkg.name] = dir;
+                const workspacePkg = getPackageJson(path.join(rootDir,dir))
+                dict[workspacePkg.name] = dir;
             })
             return dict;
         }, {})

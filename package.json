@@ -7,9 +7,9 @@
     "cli"
   ],
   "version": "1.0.0",
-  "homepage": "https://github.com/obfu5c8/yarn-workspaces",
+  "homepage": "https://github.com/obfu5c8/yarn-all-workspaces",
   "bugs": {
-    "url": "https://github.com/obfu5c8/yarn-workspaces/issues"
+    "url": "https://github.com/obfu5c8/yarn-all-workspaces/issues"
   },
   "main": "lib/index.js",
   "bin": {
@@ -27,17 +27,20 @@
   "scripts": {
     "clean": "rimraf ./lib",
     "prebuild": "rimraf ./lib",
-    "build": "babel -D src -d lib"
+    "build": "babel -D src -d lib",
+    "pretest": "yarn build",
+    "test": "jest --config=./jest.config.json"
   },
   "dependencies": {
     "chalk": "^2.3.0",
-    "split2": "^2.2.0",
-    "yargs": "^10.0.3"
+    "split2": "^2.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.36",
     "@babel/core": "^7.0.0-beta.36",
     "@babel/preset-env": "^7.0.0-beta.36",
+    "jest": "^22.0.4",
+    "rewire": "^3.0.2",
     "rimraf": "^2.6.2"
   }
 }
