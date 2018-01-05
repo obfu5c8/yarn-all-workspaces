@@ -39,10 +39,10 @@ jobs:
               
       # run tests!
       - run:
-        name: Unit tests
-        command: yarn test --ci --testResultsProcessor="jest-junit"
-        environment:
-          JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+          name: Unit tests
+          command: yarn test --ci --testResultsProcessor="jest-junit"
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
 
       - run: greenkeeper-lockfile-upload
 
