@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "chalk": "^2.3.0",
-    "split2": "^2.2.0"
+    "split2": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.36",
