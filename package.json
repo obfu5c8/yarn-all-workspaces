@@ -32,7 +32,7 @@
     "test": "jest --config=./jest.config.json"
   },
   "dependencies": {
-    "chalk": "^2.3.0",
+    "chalk": "^3.0.0",
     "split2": "^2.2.0"
   },
   "devDependencies": {
